@@ -1,0 +1,45 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# If the request is for a real file or directory, don't do anything
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Handle URL routes (clean URLs without .php extension)
+RewriteRule ^$ index.php [L]
+RewriteRule ^contact/?$ contact.php [L]
+RewriteRule ^services/?$ services.php [L]
+RewriteRule ^projects/?$ projects.php [L]
+RewriteRule ^about/?$ about.php [L]
+
+# Service pages
+RewriteRule ^custom-software/?$ custom-software.php [L]
+RewriteRule ^mobile-app/?$ mobile-app.php [L]
+RewriteRule ^web-dev/?$ web-dev.php [L]
+RewriteRule ^cloud/?$ cloud.php [L]
+RewriteRule ^ai-ml/?$ ai-ml.php [L]
+RewriteRule ^digital-transformation/?$ digital-transformation.php [L]
+
+# Handle home as / instead of /index
+RewriteRule ^index/?$ / [R=301,L]
+
+# Remove trailing slashes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
+# For security - prevent access to .htaccess and other hidden files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Set custom 404 error page
+ErrorDocument 404 /404.php
+
+# Add careers page route
+RewriteRule ^careers/?$ careers.php [L]
+
+# Add routes for privacy policy and terms pages
+RewriteRule ^privacy-policy/?$ privacy-policy.php [L]
+RewriteRule ^terms/?$ terms.php [L]

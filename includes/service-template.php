@@ -55,13 +55,7 @@ if (!isset($service['process'])) {
 <div class="pt-24 pb-12 bg-gray-900 bg-opacity-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Individual Service Page -->
-        <div class="text-center mb-12">
-            <div class="inline-block text-blue-400 text-4xl mb-4">
-                <i class="<?php echo $service['icon']; ?>"></i>
-            </div>
-            <h1 class="text-3xl md:text-5xl font-bold mb-4"><?php echo $service['title']; ?></h1>
-            <p class="text-xl text-gray-400 max-w-3xl mx-auto"><?php echo $service['description']; ?></p>
-        </div>
+     
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
             <!-- Features -->

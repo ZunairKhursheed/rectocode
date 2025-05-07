@@ -17,9 +17,6 @@ class Config {
     // Site root URL (will be populated)
     private static $siteRoot;
     
-    // Base URL configuration
-    private static $base_url = '/rectocode/'; // Update this for your local environment
-    
     /**
      * Initialize configuration
      * This should be called at the beginning of the application
@@ -98,11 +95,11 @@ class Config {
      * @return string The absolute URL
      */
     public static function url($path = '') {
-        // For local development, if the path doesn't contain .php and isn't empty, append .php
-        if (!empty($path) && strpos($path, '.php') === false && strpos($path, '#') === false) {
-            $path .= '.php';
-        }
-        return self::$base_url . $path;
+        // Remove leading slash if present
+        $path = ltrim($path, '/');
+        
+        // Return the absolute URL
+        return self::$siteRoot . '/' . $path;
     }
 }
 

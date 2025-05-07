@@ -13,7 +13,7 @@
             <div class="hidden md:block">
                 <div class="ml-10 flex items-center space-x-8">
                     <a href="<?php echo Config::url(''); ?>" class="text-white hover:text-blue-400 transition-colors duration-300">Home</a>
-                    <a href="<?php echo Config::url('about.php'); ?>" class="text-white hover:text-blue-400 transition-colors duration-300">About</a>
+                    <a href="<?php echo Config::url('about'); ?>" class="text-white hover:text-blue-400 transition-colors duration-300">About</a>
                     
                     <!-- Services Dropdown -->
                     <div class="relative group">
@@ -53,17 +53,17 @@
     <div id="mobile-menu" class="hidden md:hidden bg-gray-900 pb-4">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
             <a href="<?php echo Config::url(''); ?>" class="text-white block px-3 py-2 rounded-md hover:bg-gray-800">Home</a>
-            <a href="<?php echo Config::url('about.php'); ?>" class="text-white block px-3 py-2 rounded-md hover:bg-gray-800">About</a>
+            <a href="<?php echo Config::url('about'); ?>" class="text-white block px-3 py-2 rounded-md hover:bg-gray-800">About</a>
             <a href="<?php echo Config::url('services'); ?>" class="text-white block px-3 py-2 rounded-md hover:bg-gray-800">Services</a>
             
             <!-- Mobile services sub-menu -->
             <div class="pl-4">
                 <a href="<?php echo Config::url('custom-software'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Custom Software Development</a>
-                <a href="<?php echo Config::url('ui-ux-design'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">UI/UX Design</a>
-                <a href="<?php echo Config::url('web-development'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Web Development</a>
                 <a href="<?php echo Config::url('mobile-app'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Mobile App Development</a>
-                <a href="<?php echo Config::url('ai-agent'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">AI Agent Development</a>
-                <a href="<?php echo Config::url('digital-marketing'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Digital Marketing</a>
+                <a href="<?php echo Config::url('web-dev'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Web Development</a>
+                <a href="<?php echo Config::url('cloud'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Cloud Solutions</a>
+                <a href="<?php echo Config::url('ai-ml'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">AI & Machine Learning</a>
+                <a href="<?php echo Config::url('digital-transformation'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Digital Transformation</a>
             </div>
             
             <a href="<?php echo Config::url('projects'); ?>" class="text-white block px-3 py-2 rounded-md hover:bg-gray-800">Projects</a>

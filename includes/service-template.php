@@ -2,134 +2,55 @@
 // This file serves as a template for individual service pages
 // $service_key should be defined before including this file
 
-// Service information array - same as in services.php
-$services = [
-    'custom-software' => [
-        'title' => 'Custom Software Development',
-        'icon' => 'fas fa-code',
-        'description' => 'We create tailored software solutions designed specifically to address your unique business challenges and requirements.',
-        'features' => [
-            'Enterprise Software Solutions',
-            'Legacy System Modernization',
-            'Custom CRM & ERP Development',
-            'Workflow & Process Automation',
-            'Integration Services'
-        ],
-        'process' => [
-            'Discovery and Requirements Analysis',
-            'Solution Architecture',
-            'Development and Testing',
-            'Deployment and Integration',
-            'Support and Maintenance'
-        ]
-    ],
-    'mobile-app' => [
-        'title' => 'Mobile App Development',
-        'icon' => 'fas fa-mobile-alt',
-        'description' => 'We build high-performance, feature-rich mobile applications for iOS and Android platforms that deliver exceptional user experiences.',
-        'features' => [
-            'Native iOS & Android Apps',
-            'Cross-Platform Development',
-            'Progressive Web Apps (PWAs)',
-            'Mobile UI/UX Design',
-            'App Store Optimization'
-        ],
-        'process' => [
-            'App Strategy & Concept',
-            'UI/UX Design',
-            'Development & Testing',
-            'Launch & Deployment',
-            'Continuous Improvement'
-        ]
-    ],
-    'web-dev' => [
-        'title' => 'Web Development',
-        'icon' => 'fas fa-globe',
-        'description' => 'We create modern, responsive websites and web applications built with the latest technologies to engage your audience and drive conversions.',
-        'features' => [
-            'Responsive Website Development',
-            'Progressive Web Applications',
-            'E-commerce Solutions',
-            'CMS Development',
-            'Performance Optimization'
-        ],
-        'process' => [
-            'Information Architecture',
-            'Visual Design',
-            'Front-end & Back-end Development',
-            'Testing & Quality Assurance',
-            'Deployment & Maintenance'
-        ]
-    ],
-    'cloud' => [
-        'title' => 'Cloud Solutions',
-        'icon' => 'fas fa-cloud',
-        'description' => 'We provide secure, scalable cloud infrastructure and services designed to optimize your business applications and operations.',
-        'features' => [
-            'Cloud Migration Strategy',
-            'AWS, Azure & Google Cloud Services',
-            'Cloud Application Development',
-            'Serverless Architecture',
-            'DevOps & CI/CD Implementation'
-        ],
-        'process' => [
-            'Cloud Readiness Assessment',
-            'Migration Planning',
-            'Implementation & Testing',
-            'Security Configuration',
-            'Monitoring & Management'
-        ]
-    ],
-    'ai-ml' => [
-        'title' => 'AI & Machine Learning',
-        'icon' => 'fas fa-robot',
-        'description' => 'We build intelligent solutions that leverage data to provide insights, automate processes, and deliver personalized experiences.',
-        'features' => [
-            'Predictive Analytics',
-            'Natural Language Processing',
-            'Computer Vision Solutions',
-            'Recommendation Systems',
-            'AI-Powered Automation'
-        ],
-        'process' => [
-            'Data Collection & Preparation',
-            'Model Development',
-            'Training & Testing',
-            'Integration & Deployment',
-            'Monitoring & Refinement'
-        ]
-    ],
-    'digital-transformation' => [
-        'title' => 'Digital Transformation',
-        'icon' => 'fas fa-chart-line',
-        'description' => 'We provide strategic guidance and implementation expertise to modernize your business processes and enhance digital capabilities.',
-        'features' => [
-            'Digital Strategy Consulting',
-            'Business Process Optimization',
-            'Technology Stack Modernization',
-            'Data-Driven Decision Making',
-            'Change Management Support'
-        ],
-        'process' => [
-            'Current State Assessment',
-            'Future State Visioning',
-            'Roadmap Development',
-            'Implementation',
-            'Continuous Improvement'
-        ]
-    ]
-];
-
-// Check if the service exists
-if (!array_key_exists($service_key, $services)) {
-    // Redirect to services page if service doesn't exist
-    header('Location: /services');
-    exit;
+// Include service data if not already included
+if (!function_exists('get_service')) {
+    include 'service-data.php';
 }
 
-// Get the service details
-$service = $services[$service_key];
+// Get current service data
+$service = get_service($service_key);
+
+// Fallback if service doesn't exist
+if (!$service) {
+    echo '<div class="py-20 text-center">Service not found</div>';
+    return;
+}
+
+// Set default values if not provided
+if (!isset($service['description'])) {
+    $service['description'] = $service['short_desc'];
+}
+
+// Default features and process if not set
+if (!isset($service['features'])) {
+    $service['features'] = [
+        'Customized Solutions',
+        'Expert Implementation',
+        'Quality Assurance',
+        'Ongoing Support'
+    ];
+}
+
+if (!isset($service['process'])) {
+    $service['process'] = [
+        'Discovery & Planning',
+        'Design & Development',
+        'Testing & Refinement',
+        'Deployment & Support'
+    ];
+}
 ?>
+
+<!-- Service Hero -->
+<section class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-900 bg-opacity-80">
+    <div class="max-w-5xl mx-auto text-center">
+        <div class="mb-6 text-<?php echo $service['color']; ?> text-6xl">
+            <i class="<?php echo $service['icon']; ?>"></i>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6"><?php echo $service['title']; ?></h1>
+        <p class="text-xl text-gray-400 max-w-3xl mx-auto"><?php echo $service['short_desc']; ?></p>
+    </div>
+</section>
 
 <div class="pt-24 pb-12 bg-gray-900 bg-opacity-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

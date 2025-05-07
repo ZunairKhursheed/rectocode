@@ -4,58 +4,11 @@ $page_title = "Our Services";
 
 // Include the header
 include 'includes/header.php';
-
+    if(!function_exists('get_all_services')){
+        include 'includes/service-data.php';
+    }
 // Service information array
-$services = [
-    'custom-software' => [
-        'title' => 'Custom Software Development',
-        'icon' => 'fas fa-code',
-        'description' => 'We create tailored software solutions designed specifically to address your unique business challenges and requirements.',
-        'url' => '/custom-software',
-        'hero_image' => 'assets/images/services/custom-software-hero.jpg',
-        'hero_description' => 'Tailored solutions to meet your unique business needs'
-    ],
-    'mobile-app' => [
-        'title' => 'Mobile App Development',
-        'icon' => 'fas fa-mobile-alt',
-        'description' => 'We build high-performance, feature-rich mobile applications for iOS and Android platforms that deliver exceptional user experiences.',
-        'url' => '/mobile-app',
-        'hero_image' => 'assets/images/services/mobile-app-hero.jpg',
-        'hero_description' => 'Engaging mobile experiences for iOS and Android'
-    ],
-    'web-dev' => [
-        'title' => 'Web Development',
-        'icon' => 'fas fa-globe',
-        'description' => 'We create modern, responsive websites and web applications built with the latest technologies to engage your audience and drive conversions.',
-        'url' => '/web-dev',
-        'hero_image' => 'assets/images/services/web-dev-hero.jpg',
-        'hero_description' => 'Modern, responsive web solutions that drive results'
-    ],
-    'cloud' => [
-        'title' => 'Cloud Solutions',
-        'icon' => 'fas fa-cloud',
-        'description' => 'We provide secure, scalable cloud infrastructure and services designed to optimize your business applications and operations.',
-        'url' => '/cloud',
-        'hero_image' => 'assets/images/services/cloud-hero.jpg',
-        'hero_description' => 'Scalable infrastructure for today\'s digital business'
-    ],
-    'ai-ml' => [
-        'title' => 'AI & Machine Learning',
-        'icon' => 'fas fa-robot',
-        'description' => 'We build intelligent solutions that leverage data to provide insights, automate processes, and deliver personalized experiences.',
-        'url' => '/ai-ml',
-        'hero_image' => 'assets/images/services/ai-ml-hero.jpg',
-        'hero_description' => 'Intelligent solutions that transform your data into insights'
-    ],
-    'digital-transformation' => [
-        'title' => 'Digital Transformation',
-        'icon' => 'fas fa-chart-line',
-        'description' => 'We provide strategic guidance and implementation expertise to modernize your business processes and enhance digital capabilities.',
-        'url' => '/digital-transformation',
-        'hero_image' => 'assets/images/services/digital-transform-hero.jpg',
-        'hero_description' => 'Strategic modernization of your business for the digital age'
-    ]
-];
+$services = get_all_services();
 ?>
 
 <div class="bg-black bg-opacity-80">

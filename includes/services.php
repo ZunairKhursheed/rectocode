@@ -1,3 +1,10 @@
+<?php
+// Include service data if not already included
+if (!function_exists('get_all_services')) {
+    include 'service-data.php';
+}
+$all_services = get_all_services();
+?>
 <!-- Services Section -->
 <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 bg-opacity-50">
     <div class="max-w-7xl mx-auto">
@@ -7,63 +14,22 @@
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Service 1 -->
-            <div class="service-card p-6 rounded-lg gradient-border bg-gray-900 bg-opacity-70 transition-all duration-300">
-                <div class="mb-4 text-blue-400 text-4xl">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Custom Software Development</h3>
-                <p class="text-gray-400">Software made just for your business to help you work better and save time.
-                </p>
-            </div>
-            
-            <!-- Service 2 -->
-            <div class="service-card p-6 rounded-lg gradient-border bg-gray-900 bg-opacity-70 transition-all duration-300">
-                <div class="mb-4 text-blue-400 text-4xl">
-                    <i class="fas fa-desktop"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
-                <p class="text-gray-400">Clean and easy designs that help people use your website or app without any trouble.
-                </p>
-            </div>
-            
-            <!-- Service 3 -->
-            <div class="service-card p-6 rounded-lg gradient-border bg-gray-900 bg-opacity-70 transition-all duration-300">
-                <div class="mb-4 text-blue-400 text-4xl">
-                    <i class="fas fa-globe"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Web Development</h3>
-                <p class="text-gray-400">Fast and modern websites built to help you look good and grow online.
-                </p>
-            </div>
-            
-            <!-- Service 4 -->
-            <div class="service-card p-6 rounded-lg gradient-border bg-gray-900 bg-opacity-70 transition-all duration-300">
-                <div class="mb-4 text-blue-400 text-4xl">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Mobile App Development</h3>
-                <p class="text-gray-400">User-friendly mobile apps made to work smoothly on both Android and iPhone.
-                </p>
-            </div>
-            
-            <!-- Service 5 -->
-            <div class="service-card p-6 rounded-lg gradient-border bg-gray-900 bg-opacity-70 transition-all duration-300">
-                <div class="mb-4 text-blue-400 text-4xl">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">AI Agent Development</h3>
-                <p class="text-gray-400">AI tools that automate tasks, save time, and make your work easier and smarter.</p>
-            </div>
-            
-            <!-- Service 6 -->
-            <div class="service-card p-6 rounded-lg gradient-border bg-gray-900 bg-opacity-70 transition-all duration-300">
-                <div class="mb-4 text-blue-400 text-4xl">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Digital Marketing</h3>
-                <p class="text-gray-400">Online ads and content made to help more people find and trust your brand.</p>
-            </div>
+            <?php foreach ($all_services as $service): ?>
+                <a href="<?php echo $service['url']; ?>" class="service-card p-6 rounded-lg gradient-border bg-gray-900 bg-opacity-70 transition-all duration-300 hover:scale-105">
+                    <div class="mb-4 text-<?php echo $service['color']; ?> text-4xl">
+                        <i class="<?php echo $service['icon']; ?>"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3"><?php echo $service['title']; ?></h3>
+                    <p class="text-gray-400"><?php echo $service['short_desc']; ?></p>
+                </a>
+            <?php endforeach; ?>
+        </div>
+        
+        <!-- Call to action -->
+        <div class="text-center mt-12">
+            <a href="contact.php" class="inline-block px-6 py-3 text-lg font-medium rounded-md text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transform transition-all duration-300 hover:scale-105">
+                Request a Free Consultation
+            </a>
         </div>
     </div>
 </section> 

@@ -1,32 +1,61 @@
 # Enable URL rewriting
 RewriteEngine On
 
-# If the request is for a real file or directory, don't do anything
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
+# Set the base directory - update this for your local setup
+RewriteBase /rectocode/
 
-# Handle URL routes (clean URLs without .php extension)
-RewriteRule ^$ index.php [L]
-RewriteRule ^contact/?$ contact.php [L]
+# Redirect to www version if needed (uncomment if needed)
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Redirect index.php to root
+RewriteRule ^index\.php$ /rectocode/ [R=301,L]
+
+# Handle clean URLs for services
 RewriteRule ^services/?$ services.php [L]
-RewriteRule ^projects/?$ projects.php [L]
-RewriteRule ^about/?$ about.php [L]
-
-# Service pages
 RewriteRule ^custom-software/?$ custom-software.php [L]
+RewriteRule ^ui-ux-design/?$ ui-ux-design.php [L]
+RewriteRule ^web-development/?$ web-development.php [L]
 RewriteRule ^mobile-app/?$ mobile-app.php [L]
-RewriteRule ^web-dev/?$ web-dev.php [L]
-RewriteRule ^cloud/?$ cloud.php [L]
-RewriteRule ^ai-ml/?$ ai-ml.php [L]
-RewriteRule ^digital-transformation/?$ digital-transformation.php [L]
+RewriteRule ^ai-agent/?$ ai-agent.php [L]
+RewriteRule ^digital-marketing/?$ digital-marketing.php [L]
 
-# Handle home as / instead of /index
-RewriteRule ^index/?$ / [R=301,L]
+# Redirect legacy service URLs to new ones
+# If someone tries to access old service URLs, redirect them to the appropriate page
+RewriteRule ^web-dev/?$ web-development.php [R=301,L]
+RewriteRule ^ai-ml/?$ ai-agent.php [R=301,L]
 
-# Remove trailing slashes
+# Redirect removed services to the main services page
+RewriteRule ^cloud/?$ services.php [R=301,L]
+RewriteRule ^digital-transformation/?$ services.php [R=301,L]
+
+# Handle other page URLs
+RewriteRule ^about/?$ about.php [L]
+RewriteRule ^contact/?$ contact.php [L]
+RewriteRule ^projects/?$ projects.php [L]
+
+# If the requested resource doesn't exist and is not a file or directory,
+# redirect to a friendly 404 page
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ /$1 [R=301,L]
+RewriteRule ^(.*)$ 404.php [L]
+
+# Enable GZIP compression for faster loading
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>
+
+# Set browser caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresDefault "access plus 1 week"
+</IfModule>
 
 # For security - prevent access to .htaccess and other hidden files
 <FilesMatch "^\.">

@@ -13,16 +13,18 @@
                     <i class="fas fa-code"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-3">Custom Software Development</h3>
-                <p class="text-gray-400">Tailored solutions designed to address your specific business challenges and requirements.</p>
+                <p class="text-gray-400">Software made just for your business to help you work better and save time.
+                </p>
             </div>
             
             <!-- Service 2 -->
             <div class="service-card p-6 rounded-lg gradient-border bg-gray-900 bg-opacity-70 transition-all duration-300">
                 <div class="mb-4 text-blue-400 text-4xl">
-                    <i class="fas fa-mobile-alt"></i>
+                    <i class="fas fa-desktop"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Mobile App Development</h3>
-                <p class="text-gray-400">Cross-platform and native mobile applications that deliver exceptional user experiences.</p>
+                <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+                <p class="text-gray-400">Clean and easy designs that help people use your website or app without any trouble.
+                </p>
             </div>
             
             <!-- Service 3 -->
@@ -31,16 +33,18 @@
                     <i class="fas fa-globe"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-3">Web Development</h3>
-                <p class="text-gray-400">Modern, responsive websites and web applications built with the latest technologies.</p>
+                <p class="text-gray-400">Fast and modern websites built to help you look good and grow online.
+                </p>
             </div>
             
             <!-- Service 4 -->
             <div class="service-card p-6 rounded-lg gradient-border bg-gray-900 bg-opacity-70 transition-all duration-300">
                 <div class="mb-4 text-blue-400 text-4xl">
-                    <i class="fas fa-cloud"></i>
+                    <i class="fas fa-mobile-alt"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Cloud Solutions</h3>
-                <p class="text-gray-400">Secure, scalable cloud infrastructure and services for your business applications.</p>
+                <h3 class="text-xl font-bold mb-3">Mobile App Development</h3>
+                <p class="text-gray-400">User-friendly mobile apps made to work smoothly on both Android and iPhone.
+                </p>
             </div>
             
             <!-- Service 5 -->
@@ -48,8 +52,8 @@
                 <div class="mb-4 text-blue-400 text-4xl">
                     <i class="fas fa-robot"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3">AI & Machine Learning</h3>
-                <p class="text-gray-400">Intelligent solutions that leverage data to provide insights and automate processes.</p>
+                <h3 class="text-xl font-bold mb-3">AI Agent Development</h3>
+                <p class="text-gray-400">AI tools that automate tasks, save time, and make your work easier and smarter.</p>
             </div>
             
             <!-- Service 6 -->
@@ -57,8 +61,8 @@
                 <div class="mb-4 text-blue-400 text-4xl">
                     <i class="fas fa-chart-line"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Digital Transformation</h3>
-                <p class="text-gray-400">Strategic guidance and implementation to modernize your business processes.</p>
+                <h3 class="text-xl font-bold mb-3">Digital Marketing</h3>
+                <p class="text-gray-400">Online ads and content made to help more people find and trust your brand.</p>
             </div>
         </div>
     </div>

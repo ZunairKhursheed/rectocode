@@ -3,39 +3,42 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-                <div class="flex items-center mb-4">
-                    <div class="w-10 h-10 rounded-full gradient-border flex items-center justify-center">
-                        <span class="text-xl font-bold" style="background: linear-gradient(90deg, #065ca9 0%, #4fc3f7 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">RC</span>
-                    </div>
-                    <span class="ml-3 text-xl font-bold text-white">RECTO <span class="gradient-text">CODE</span></span>
-                </div>
+                <a href="<?php echo Config::url(''); ?>" class="flex items-center mb-4">
+                    <img src="assets/images/Horizontal Logo.png" alt="Recto Code Logo" class="w-auto h-10 ">
+                </a>
                 <p class="text-gray-400">Transforming businesses through innovative software solutions.</p>
                 
                 <div class="mt-6 flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                    <a href="https://x.com/Rectocode?t=LO0E3Yl7OYDoWatnP4dg6Q&s=08" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                    <a href="https://www.facebook.com/profile.php?id=61575620378244&mibextid=ZbWKwL" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                    <a href="https://www.linkedin.com/company/recto-code-official/posts/?feedView=all" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                    <!-- <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                         <i class="fab fa-github"></i>
-                    </a>
+                    </a> -->
                 </div>
             </div>
             
             <div>
                 <h3 class="text-lg font-bold mb-6">Services</h3>
                 <ul class="space-y-4">
-                    <li><a href="<?php echo Config::url('custom-software'); ?>" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Custom Software Development</a></li>
-                    <li><a href="<?php echo Config::url('mobile-app'); ?>" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Mobile App Development</a></li>
-                    <li><a href="<?php echo Config::url('web-dev'); ?>" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Web Development</a></li>
-                    <li><a href="<?php echo Config::url('cloud'); ?>" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Cloud Solutions</a></li>
-                    <li><a href="<?php echo Config::url('ai-ml'); ?>" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">AI & Machine Learning</a></li>
-                    <li><a href="<?php echo Config::url('digital-transformation'); ?>" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">Digital Transformation</a></li>
+                    <?php
+                    // Include service data if not already included
+                    if (!function_exists('get_all_services')) {
+                        include 'service-data.php';
+                    }
+                    $all_services = get_all_services();
+                    
+                    // Display each service as a link
+                    foreach ($all_services as $slug => $service) {
+                        echo '<li><a href="' . Config::url($slug) . '" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">' . $service['title'] . '</a></li>';
+                    }
+                    ?>
                 </ul>
             </div>
             
@@ -53,18 +56,18 @@
             <div>
                 <h3 class="text-lg font-bold mb-6">Contact Us</h3>
                 <ul class="space-y-4">
-                    <li class="flex items-start">
+                    <!-- <li class="flex items-start">
                         <i class="fas fa-map-marker-alt text-blue-400 mt-1 mr-3"></i>
                         <span class="text-gray-400">123 Innovation Street, Tech Hub, San Francisco, CA 94103</span>
-                    </li>
+                    </li> -->
                     <li class="flex items-start">
                         <i class="fas fa-envelope text-blue-400 mt-1 mr-3"></i>
                         <span class="text-gray-400">info@rectocode.com</span>
                     </li>
-                    <li class="flex items-start">
+                    <!-- <li class="flex items-start">
                         <i class="fas fa-phone-alt text-blue-400 mt-1 mr-3"></i>
                         <span class="text-gray-400">+1 (555) 123-4567</span>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>

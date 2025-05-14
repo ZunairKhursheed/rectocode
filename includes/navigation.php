@@ -4,10 +4,13 @@
         <div class="flex justify-between h-20 items-center">
             <div class="flex items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <div class="w-10 h-10 rounded-full gradient-border flex items-center justify-center">
-                        <span class="text-xl font-bold" style="background: linear-gradient(90deg, #065ca9 0%, #4fc3f7 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">RC</span>
-                    </div>
-                    <span class="ml-3 text-xl font-bold text-white">RECTO <span class="gradient-text">CODE</span></span>
+                    <a href="<?php echo Config::url(''); ?>" class="flex items-center hover:opacity-90 transition-opacity">
+                        <img src="assets/images/Horizontal Logo.png" alt="Recto Code Logo" class="w-auto h-10 ">
+                    <!-- <div class="w-10 h-10 rounded-full gradient-border flex items-center justify-center">
+                            <span class="text-xl font-bold" style="background: linear-gradient(90deg, #065ca9 0%, #4fc3f7 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">RC</span>
+                        </div>
+                        <span class="ml-3 text-xl font-bold text-white font-roboto">RECTO <span class="gradient-text">CODE</span></span> -->
+                    </a>
                 </div>
             </div>
             <div class="hidden md:block">
@@ -37,7 +40,8 @@
                     
                     <a href="<?php echo Config::url('projects'); ?>" class="text-white hover:text-blue-400 transition-colors duration-300">Projects</a>
                     <a href="<?php echo Config::url(''); ?>#testimonials" class="text-white hover:text-blue-400 transition-colors duration-300">Testimonials</a>
-                    <a href="<?php echo Config::url('contact'); ?>" class="px-4 py-2 rounded-md gradient-border text-white hover:bg-blue-900 hover:bg-opacity-20 transition-all duration-300">Contact</a>
+                    <a href="<?php echo Config::url('contact'); ?>" class="px-4 py-2 rounded-md bg-gradient-to-r from-blue-600 to-blue-400 text-white font-medium hover:from-blue-500 hover:to-blue-300 transition-all duration-300 transform  flex items-center">   <span>Start Your Project</span>
+                    <i class="fas fa-arrow-right ml-2"></i></a>
                 </div>
             </div>
             <div class="md:hidden">
@@ -59,11 +63,11 @@
             <!-- Mobile services sub-menu -->
             <div class="pl-4">
                 <a href="<?php echo Config::url('custom-software'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Custom Software Development</a>
+                <a href="<?php echo Config::url('ui-ux-design'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">UI/UX Design</a>
+                <a href="<?php echo Config::url('web-development'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Web Development</a>
                 <a href="<?php echo Config::url('mobile-app'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Mobile App Development</a>
-                <a href="<?php echo Config::url('web-dev'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Web Development</a>
-                <a href="<?php echo Config::url('cloud'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Cloud Solutions</a>
-                <a href="<?php echo Config::url('ai-ml'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">AI & Machine Learning</a>
-                <a href="<?php echo Config::url('digital-transformation'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Digital Transformation</a>
+                <a href="<?php echo Config::url('ai-agent'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">AI Agent Development</a>
+                <a href="<?php echo Config::url('digital-marketing'); ?>" class="text-gray-400 block px-3 py-1 text-sm rounded-md hover:bg-gray-800">Digital Marketing</a>
             </div>
             
             <a href="<?php echo Config::url('projects'); ?>" class="text-white block px-3 py-2 rounded-md hover:bg-gray-800">Projects</a>

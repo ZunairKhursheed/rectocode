@@ -18,7 +18,7 @@ include 'includes/header.php';
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
             <div>
                 <h2 class="text-2xl md:text-3xl font-bold mb-6">Our Story</h2>
-                <p class="text-gray-400 mb-6">Recto Code was founded in 2018 by a group of software engineers who shared a vision: to create technology that makes a meaningful impact on businesses and people's lives.</p>
+                <p class="text-gray-400 mb-6">Recto Code was founded in 2020 by a group of software engineers who shared a vision: to create technology that makes a meaningful impact on businesses and people's lives.</p>
                 
                 <p class="text-gray-400 mb-6">What started as a small team of four developers working out of a co-working space has grown into a full-service software development company with experts in various technology domains.</p>
                 
@@ -26,7 +26,7 @@ include 'includes/header.php';
             </div>
             <div class="relative">
                 <div class="gradient-border rounded-lg overflow-hidden">
-                    <img src="/assets/images/about-story.jpg" alt="Recto Code Team Working" class="w-full h-auto">
+                    <img src="assets/images/about.png" alt="Recto Code Team Working" class="w-full h-auto">
                 </div>
                 <div class="absolute -bottom-6 -right-6 w-32 h-32 rounded-lg gradient-border bg-gray-900 bg-opacity-90 flex items-center justify-center p-4 text-center">
                     <div>
@@ -49,7 +49,7 @@ include 'includes/header.php';
                         <blockquote class="text-xl italic text-white">
                             "We don't just build software; we build partnerships that transform businesses."
                         </blockquote>
-                        <p class="mt-4 text-gray-400">— David Chen, CEO</p>
+                        <p class="mt-4 text-gray-400">— Zubair Ahmad, CEO</p>
                     </div>
                 </div>
                 
@@ -98,14 +98,13 @@ include 'includes/header.php';
         </div>
         
         <!-- Team Section -->
-        <div class="mb-24">
+        <!-- <div class="mb-24">
             <div class="text-center mb-16">
                 <h2 class="text-2xl md:text-4xl font-bold mb-4">Meet Our <span class="gradient-text">Team</span></h2>
                 <p class="text-xl text-gray-400 max-w-3xl mx-auto">A diverse group of passionate experts dedicated to creating exceptional software solutions</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Team Member 1 -->
                 <div class="bg-gray-900 bg-opacity-70 rounded-lg overflow-hidden gradient-border group">
                     <div class="relative overflow-hidden">
                         <img src="/assets/images/team-1.jpg" alt="David Chen" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
@@ -126,7 +125,6 @@ include 'includes/header.php';
                     </div>
                 </div>
                 
-                <!-- Team Member 2 -->
                 <div class="bg-gray-900 bg-opacity-70 rounded-lg overflow-hidden gradient-border group">
                     <div class="relative overflow-hidden">
                         <img src="/assets/images/team-2.jpg" alt="Sarah Johnson" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
@@ -147,7 +145,6 @@ include 'includes/header.php';
                     </div>
                 </div>
                 
-                <!-- Team Member 3 -->
                 <div class="bg-gray-900 bg-opacity-70 rounded-lg overflow-hidden gradient-border group">
                     <div class="relative overflow-hidden">
                         <img src="/assets/images/team-3.jpg" alt="Michael Rodriguez" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
@@ -168,7 +165,6 @@ include 'includes/header.php';
                     </div>
                 </div>
                 
-                <!-- Team Member 4 -->
                 <div class="bg-gray-900 bg-opacity-70 rounded-lg overflow-hidden gradient-border group">
                     <div class="relative overflow-hidden">
                         <img src="/assets/images/team-4.jpg" alt="Emily Zhang" class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
@@ -189,7 +185,7 @@ include 'includes/header.php';
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         
         <!-- Stats Section -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
@@ -216,12 +212,10 @@ include 'includes/header.php';
             <h2 class="text-2xl md:text-3xl font-bold mb-6">Join Our Journey</h2>
             <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-8">Ready to transform your business with innovative tech solutions? Let's create something amazing together.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact" class="px-8 py-4 rounded-md bg-gradient-to-r from-blue-600 to-blue-400 text-white font-medium hover:from-blue-500 hover:to-blue-300 transition-all duration-300 transform hover:scale-105">
+                <a href="<?php echo Config::url('contact'); ?>" class="px-8 py-4 rounded-md bg-gradient-to-r from-blue-600 to-blue-400 text-white font-medium hover:from-blue-500 hover:to-blue-300 transition-all duration-300 transform hover:scale-105">
                     Start a Project
                 </a>
-                <a href="/careers" class="px-8 py-4 rounded-md gradient-border text-white font-medium hover:bg-blue-900 hover:bg-opacity-20 transition-all duration-300">
-                    Join Our Team
-                </a>
+               
             </div>
         </div>
     </div>

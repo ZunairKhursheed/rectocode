@@ -75,5 +75,10 @@
                 </div>
             </div>
         </div>
+        <div class="text-center mt-16">
+            <a href="<?php echo Config::url('projects'); ?>" class="inline-block px-8 py-4 rounded-md bg-gradient-to-r from-blue-600 to-blue-400 text-white font-medium hover:from-blue-500 hover:to-blue-300 transition-all duration-300 transform hover:scale-105">
+                View All Projects
+            </a>
+        </div>
     </div>
 </section> 

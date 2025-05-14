@@ -89,10 +89,11 @@ include 'includes/header.php';
         </div>
         <?php endif; ?>
         
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 text-center gap-12">
             <div>
                 <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
                 <div class="space-y-6">
+                    <!-- Commenting out location as it's not present in footer
                     <div class="flex items-start">
                         <div class="text-blue-400 text-xl mt-1 mr-4">
                             <i class="fas fa-map-marker-alt"></i>
@@ -102,18 +103,20 @@ include 'includes/header.php';
                             <p class="text-gray-400">123 Innovation Street, Tech Hub, San Francisco, CA 94103</p>
                         </div>
                     </div>
+                    -->
                     
-                    <div class="flex items-start">
+                    <div class="flex items-center justify-center text-left">
                         <div class="text-blue-400 text-xl mt-1 mr-4">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <div>
                             <h4 class="font-bold text-white">Email Us</h4>
                             <p class="text-gray-400">info@rectocode.com</p>
-                            <p class="text-gray-400">support@rectocode.com</p>
+                            <!-- <p class="text-gray-400">support@rectocode.com</p> -->
                         </div>
                     </div>
                     
+                    <!-- Commenting out phone numbers as they're not present in footer
                     <div class="flex items-start">
                         <div class="text-blue-400 text-xl mt-1 mr-4">
                             <i class="fas fa-phone-alt"></i>
@@ -124,33 +127,35 @@ include 'includes/header.php';
                             <p class="text-gray-400">+1 (555) 987-6543</p>
                         </div>
                     </div>
+                    -->
                     
                     <div class="pt-6">
                         <h4 class="font-bold text-white mb-4">Follow Us</h4>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                        <div class="flex space-x-4 justify-center items-center">
+                            <a href="https://x.com/Rectocode?t=LO0E3Yl7OYDoWatnP4dg6Q&s=08" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                                 <i class="fab fa-twitter text-xl"></i>
                             </a>
-                            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                            <a href="https://www.facebook.com/profile.php?id=61575620378244&mibextid=ZbWKwL" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                                 <i class="fab fa-facebook text-xl"></i>
                             </a>
-                            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                            <a href="https://www.linkedin.com/company/recto-code-official/posts/?feedView=all" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                                 <i class="fab fa-linkedin text-xl"></i>
                             </a>
-                            <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                            <!-- <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                                 <i class="fab fa-instagram text-xl"></i>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
                 
-                <!-- Map -->
+                <!-- Commenting out map section as there's no physical address
                 <div class="mt-12 rounded-lg overflow-hidden gradient-border h-64">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50469.90053059388!2d-122.43932886206209!3d37.76324193746742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sph!4v1661744518658!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+                -->
             </div>
             
-            <div>
+            <div class="md:max-w-3xl md:mx-auto">
                 <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
                 <form action="/contact" method="POST" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

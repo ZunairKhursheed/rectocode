@@ -7,7 +7,7 @@
     </div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hero-content">
-        <div class="relative z-10">
+        <div class="relative z-10  lg:max-w-[calc(100%-500px)]">
             <div class="mb-2">
                 <span class="px-4 py-1 rounded-full gradient-border text-sm font-medium text-blue-400">
                     INNOVATING THE FUTURE
@@ -15,11 +15,11 @@
             </div>
             
             <h1 class="hero-title">
-                <span class="gradient-text">Digital Excellence</span><br>
+                <span class="gradient-text">Digital Excellence </span><br>
                 Crafted with Precision
             </h1>
             
-            <p class="hero-subtitle text-gray-300">
+            <p class="hero-subtitle text-gray-300 ">
                 We transform complex challenges into elegant digital solutions. Our cutting-edge software development services help businesses thrive in the digital age.
             </p>
             
